@@ -1,219 +1,533 @@
-// JavaScript Fundamentals – Part 1
-//Coding Challenge #1
+// 'use strict';
+// const passTest = true;
+// let hasDriversLisence = false;
 
-// Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+// if (passTest) hasDriversLisence = true;
+// if (hasDriversLisence) console.log(`I can drive`);
 
-// const massMark = 78;
-// const heightMark = 1.69;
-// const massJohn = 92;
-// const heightJohn = 1.95;
+// // const interface = `Audio`;
+// // const private = 534;
+// const ifSo = 34;
 
-// Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76m tall.
-/*
-const massMark = 95;
-const heightMark = 1.88;
-const massJohn = 85;
-const heightJohn = 1.76;
+// function orang(name, age, hobby) {
 
-// Calculate both their BMIs using the formula
-
-bmiMark = massMark / (heightMark ** 2);
-bmiJohn = massJohn / (heightJohn ** 2);
-
-console.log(bmiMark, bmiJohn);
-
-// Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John.
-const markHigherBMI = bmiMark > bmiJohn;
-console.log(markHigherBMI);
-//---------------------------------------------
-
-
-const personName = "Navein";
-const birthYear = 1997;
-const thisYear = 2023;
-const myAge = thisYear - birthYear;
-
-const navein = `I'm ${personName}
-I'm ${myAge}
-born in ${birthYear}
-also ${thisYear}`;
-console.log(navein);
-
-
-const myAge = 15;
-const isOldEnough = myAge >= 18;
-if (isOldEnough) {
-    console.log('Sarah loves sex 🤤');
-} else {
-    const yearsLeft = 18 - myAge;
-    console.log(`You have ${yearsLeft} years more to be old enough`);
-}
-
-//Coding Challenge #2
-
-const massMark = 95;
-const heightMark = 1.88;
-const massJohn = 85;
-const heightJohn = 1.76;
-
-bmiMark = massMark / (heightMark ** 2);
-bmiJohn = massJohn / (heightJohn ** 2);
-
-if (bmiMark > bmiJohn) {
-    console.log(`Mark's BMI (${bmiMark}) is higher than John's (${bmiJohn})!`);
-} else {
-    console.log(`John's BMI is (${bmiJohn}) higher than Mark's (${bmiMark})!`);
-}
-//----------------------------------------------------
-
-let yearBorn = 23;
-console.log(Number(yearBorn) + 18);
-
-console.log(String(yearBorn), 19);
-console.log('23' + '2');
-console.log('23' - '2');
-console.log('23' * '2');
-
-let n = '1' + 1;
-n = n - 1;
-console.log(n);
-
-
-console.log(Boolean(0));
-let money = 0;
-
-if (money) {
-    console.log(`don't spend it all`);
-} else {
-    console.log(`spend it all`);
-}
-
-let height = 0;
-if (height) {
-    console.log(`height is defined`);
-}
-else {
-    console.log(`height is undefined`);
-}
-
-
-// == with coercient, will convert '18' string to num
-// === without coercient
-let age = '18';
-
-if (age == 18) {
-    console.log(`==`);
-}
-
-//store input in a variable
-//Number at prompt also can, so when input you're taking in a number form
-const fav = Number(prompt(`Fav number?`));
-console.log(fav);
-console.log(typeof fav);
-
-if (fav === 12) {
-    console.log(`Cool! Same`);
-} else if (fav === 1) {
-    console.log(`Fatty`);
-} else {
-    console.log(`number is not 1 or 12`);
-}
-if (fav !== 23) {
-    console.log(`why not 23`);
-}
-
-
-
-// - got driving lisence - can see - is not tired
-
-const gotLisence = true;
-const canSee = true;
-const isTired = true;
-
-if (gotLisence && canSee && !isTired) {
-    console.log('Can drive');
-} else {
-    console.log(`can't drive`);
-}
-*/
-
-//Coding Challenge #3
-
-// let Dolphins = (96 + 108 + 89) / 3;
-// let Koalas = (88 + 91 + 110) / 3;
-
-// console.log(Dolphins, Koalas);
-
-// if (Dolphins > Koalas) {
-//     console.log(`Dolphins wins!`);
-// }
-// else if (Dolphins < Koalas) {
-//     console.log(`Koalas wins!`);
-// }
-// else {
-//     console.log(`Draw!`);
+//     const person = `My name is ${name}.\n\I am ${age} and my hobby is ${hobby}.`;
+//     return person;
 // }
 
-// let Dolphins = (97 + 112 + 101) / 3;
-// // let Koalas = (109 + 95 + 123) / 3;
-// let Koalas = (109 + 95 + 106) / 3;
-// let oDolphins = Dolphins >= 100;
-// let oKoalas = Koalas >= 100;
+// const Navein = orang('Navein', 26, 'Golf');
+// console.log(Navein);
 
-// console.log(Dolphins, Koalas);
+// const San = orang('San', 28, 'Futsal');
+// console.log(San);
 
-// if (oDolphins && (Dolphins > Koalas)) {
-//     console.log(`Dolphins wins!`);
-// }
-// else if (oKoalas && (Dolphins < Koalas)) {
-//     console.log(`Koalas wins!`);
-// }
-// else if (oKoalas && oDolphins && (oKoalas === oDolphins)) {
-//     console.log(`Draw!`);
-// }
-// else {
-//     console.log(`no one wins😫`);
-// }
-//-------------------------------------------------
+//function declaration
+//
 
-// A challenge : Create a day for a
-//switch case where friday, sat, and sun you do what. And weekends you do the same thing.
+// let average;
 
-// const day = 'sat';
-
-// if (day === 'friday') {
-//     console.log('Yippie Fridayyyy');
-// }
-// else if (day === ('sat' || 'sun')) {
-//     console.log('Enjoy the weekend');
-
-// }
-// else {
-//     console.log(`there's none to party`);
+// const calcAverage = (a, b, c) => {
+//     average = (a + b + c) / 3;
+//     return average;
 // }
 
-// const age = 13;
-// let drink2;
-// const drink = age >= 18 ? 'buy wine' : 'buy water';
-// console.log(drink);
-
-// if (age >= 18) {
-//     drink2 = 'wine';
+// const checkWinner = (avgDolhins, avgKoalas) => {
+//     if (avgDolhins >= 2 * avgKoalas) {
+//         console.log(`Dolphins win (${avgDolhins} vs ${avgKoalas})`)
+//     }
+//     else if (avgKoalas >= 2 * avgDolhins) {
+//         console.log(`Koalas win (${avgDolhins} vs ${avgKoalas})`)
+//     }
+//     else {
+//         console.log(`No winner at all`)
+//     }
 // }
-// else {
-//     drink2 = 'water';
+
+// checkWinner(calcAverage(85, 54, 41), calcAverage(23, 37, 27))
+
+// const bills = [125, 555, 44];
+// let tips = [];
+
+// const calcTip = () => {
+
+//     if (bills >= 50 && bills <= 300) {
+//         if (i < 3) {
+//             tips[i] = 0.15 * bills;
+//             console.log(tips[i]);
+//             return tips;
+//         }
+//     }
+//     else {
+//         if (i < 3) {
+//             tips[i] = 0.2 * bills;
+//             return tips;
+//         }
+//     }
 // }
 
-// console.log(drink2);
+// console.log(calcTip);
 
-// console.log(`i like to drink water ${age >= 18 ? 'buy wine' : 'buy water'}`);
+// const calcAge3 = birthyear => 2037 - birthyear;
+// const age3 = calcAge3(1997);
+// console.log(age3);
+
+// calculate years to retire, you'll need your name, and birthyear, and return a string that explains in total.
+
+// const yearsToRetire = (fName, birthYear) => {
+//     const age = 2023 - birthYear;
+//     const retire = 60 - age;
+//     return `${fName} retires in ${retire} years`;
+// }
+
+// // console.log(yearsToRetire(`Navein`, 1997));
+// const cutFruit = (fruit) => {
+//     return fruit * 4;
+// }
+
+// const fruitProcessor = (apples, oranges) => {
+//     const applePieces = cutFruit(apples);
+//     const orangePieces = cutFruit(oranges);
+
+//     const juice = `Juice with ${applePieces} apples and ${orangePieces} oranges.`;
+//     return juice;
+// }
+
+// // fruitProcessor(2, 3)  - to run the Service
+// console.log(fruitProcessor(2, 3)); // - to show the Output
+
+// const calcAge = function (birthYear) {
+//     return 2024 - birthYear;
+// }
+
+// const yearsToRetire = function (fName, birthYear) {
+//     const age = calcAge(birthYear);  //crtl+D more & more to select & modify same variables
+//     const retire = 60 - age;
+//     if (retire > 0) {
+//         console.log(`fatty`) // use alt+up to move this word up
+//         return retire;
+//     }
+//     else {
+//         return -1;
+//     }
+
+//     return retire;
+//     // return `${fName} retires in ${retire} years`;
+// }
+
+// console.log(yearsToRetire('Navein', 1997));
+// console.log(yearsToRetire('Navein', 1920));
+
+// JavaScript Fundamentals – Part 2
+// Coding Challenge #1
+
+// let average;
+
+// const calcAverage = (a, b, c) => {
+//     average = (a + b + c) / 3;
+//     return average;
+// }
+
+// let dolph = calcAverage(44, 23, 71);
+// let koals = calcAverage(65, 54, 49);
+
+// const checkWinner = (avgDolhins, avgKoalas) => {
+//     if (avgDolhins >= 2 * avgKoalas) {
+//         console.log(`Dolhins win (Dolhins: ${avgDolhins} vs. Koalas: ${avgKoalas})`)
+//     }
+//     else if (avgKoalas >= 2 * avgDolhins) {
+//         console.log(`Koalas win (Dolhins: ${avgDolhins} vs. Koalas: ${avgKoalas})`)
+//     }
+//     else {
+//         console.log(`no team wins!`);
+//     }
+// }
+
+// let dolph1 = calcAverage(85, 54, 41);
+// let koals1 = calcAverage(23, 34, 27);
+
+// checkWinner(dolph, koals);
+// checkWinner(dolph1, koals1);
+//--------------------------------------------
+
+// const Fruits = ['Mango', 'Durian', 'Apple', 'Orange'];
+// console.log(Fruits[1]);
+// Fruits[1] = 'Grapes';
+// console.log(Fruits);
+// console.log(Fruits[Fruits.length - 1])
+
+// const fName = 'Navein';
+// const me = [fName, 2023 - 1997, 'Selangor', Fruits[1]];
+// console.log(me);
+// console.log(me.length);
+
+// //Exercise
+// const calcAge = (birthYear) => {
+//     return 2023 - birthYear;
+// }
+// const years = [1990, 1967, 2022, 2010, 2018];
+
+// const age1 = calcAge(years[0]);
+// const age2 = calcAge(years[1]);
+// const age3 = calcAge(years[years.length - 1]);
+
+// console.log(age1, age2, age3);
+
+// //in array, can have anything that produce value.
+// const age = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
+
+// console.log(age);
+
+// const Fruits = ['Mango', 'Durian', 'Apple', 'Orange'];
+// Fruits.push('Grapes'); //add element - need argument - last - array
+// console.log(Fruits);
+
+// Fruits.unshift('Kiwi'); //add - first - array
+// console.log(Fruits);
+
+// Fruits.shift(); //remove - first - array
+// console.log(Fruits);
+
+// //You're executing a service
+// Fruits.pop(); //remove - last - array
+
+// //You're not executing, just printing out
+// console.log(Fruits);
+
+// console.log(Fruits.indexOf('Apple'));
+// //You're not executing, just printing out
+
+// console.log(Fruits.includes('Kiwi'));
+// //include - true or false
+// console.log(Fruits.includes('Mango'));
+// Fruits.push('23');
+// console.log(Fruits.includes(23));
+// console.log(Fruits.includes('23'));
+
+// if (Fruits.includes('Apple')) {
+//     console.log('This code includes Apple');
+// }
+
+// JavaScript Fundamentals – Part 2
+// Coding Challenge #2
+
+// const calcTip = (bill) => {
+//     if (bill >= 50 && bill <= 300) {
+//         return bill * 0.15;
+//     } else {
+//         return bill * 0.2;
+//     }
+// }
+
+// const bills = [125, 555, 44];
+// const tips = [];
+
+// for (let i = 0; i < bills.length; i++) {
+//     tips[i] = calcTip(bills[i]);
+// }
+
+// const total = [];
+
+// for (let i = 0; i < bills.length; i++) {
+//     total[i] = tips[i] + bills[i];
+//     console.log(`Bill: $${bills[i]} + tip: $${tips[i]} = total: $${total[i]}`);
+// }
+
+// const Array = [
+//     'fatty',
+//     'chotti',
+//     23
+// ];
+
+// const Object = {
+//     name: 'fatty',  //name - key/property, fatty - value
+//     lastName: 'chotti',
+//     age: 23
+// };
+
+// //can use dot or bracket to call object's value
+// const nameKey = 'Name';
+// console.log(Object['last' + nameKey]);
+// console.log(Object['name'] + ' ' + Object['lastName']);
+
+// //prompt get input
+// const interestIn = prompt(`what do you want to know about me.
+// name, lastName or age?`);
+// console.log(Object[interestIn]); //use brackets instead of dot
+
+// Object.location = 'Portufal';
+// Object['address'] = 'Malaysia';
+
+// if (Object[interestIn]) {
+//     console.log(Object[interestIn]);
+// } else {
+//     console.log(`Only can input name, lastName or age`);
+// }
+
+// Navein has 3 friends and his bestfriend is called Yuki
+// const aboutMe = {
+//     myName: 'Navein',
+//     myFriends: ['Amma', 'Appa', 'Anne'],
+//     bestFriend: 'Yuki'
+// };
+
+// console.log(`${aboutMe.myName} has ${aboutMe.myFriends.length} friends and his bestfriend is called ${aboutMe.myFriends[0]}.`);
+
+// const aboutMe = {
+//     myName: 'Navein',
+//     myAgeL: 26,
+//     birthYear: 1997,
+//     myFriends: ['Amma', 'Appa', 'Anne'],
+//     location: 'Kuantan',
+
+//     myQuestion: function () {
+//         const soalan = prompt(`Does ${this.myName} stays in ${this.location}? Yes or No:`);
+//         if (soalan.toLowerCase() === 'yes') {
+//             console.log(`${this.myName} stays in ${this.location}`);
+//         } else {
+//             console.log(`${this.myName} doesn't stay in ${this.location}`);
+//         }
+//     }
+// };
+
+// aboutMe.myQuestion();
+
+// const mark = {
+//     name: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+//     bmi: 0,
+//     calcBMI: function (mass, height) {
+//         return this.bmi = mass / height ** 2;
+//     }
+// };
+
+// const john = {
+//     name: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+//     bmi: 0,
+//     calcBMI: function (mass, height) {
+//         return this.bmi = mass / height ** 2;
+//     }
+// };
+
+// mark.calcBMI(mark.mass, mark.height);
+// john.calcBMI(john.mass, john.height);
+
+// if (mark.bmi > john.bmi) {
+//     console.log(`Mark's BMI (${mark.bmi}) is higher than John's (${john.bmi})!`)
+// } else {
+//     console.log(`John's BMI (${john.bmi}) is higher than Mark's (${mark.bmi})!`)
+// }
+
+// JavaScript Fundamentals – Part 2
+// Coding Challenge #3
+
+// const mark = {
+//     fName: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+//     bmi: 0,
+//     BMI: function () {
+//         return this.bmi = this.mass / this.height ** 2;
+//     }
+// };
+
+// const john = {
+//     fName: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+//     bmi: 0,
+//     BMI: function () {
+//         return this.bmi = this.mass / this.height ** 2;
+//     }
+// };
+
+// mark.BMI();
+// john.BMI();
+// if (mark.bmi > john.bmi) {
+//     console.log(`Mark's BMI (${mark.bmi}) is higher than John's (${john.bmi})!`);
+// } else {
+//     console.log(`John's BMI (${john.bmi}) is higher than Mark's (${mark.bmi})!`);
+// }
+
+// JavaScript Fundamentals – Part 2
+// Coding Challenge #4
+
+// 1. Create an array 'bills' containing all 10 test bill values
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// // 2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+// const tips = [];
+// const total = [];
+// 3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate
+// tips and total values (bill + tip) for every bill value in the bills array. Use a for
+// loop to perform the 10 calculations!
+// for (let i = 0; i < bills.length; i++) {
+//     tips[i] = calcTip(bills[i]);
+// }
+// Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+// Hints: Call ‘calcTip ‘in the loop and use the push method to add values to the
+// tips and totals arrays �
+// Bonus:
+// 4. Bonus: Write a function 'calcAverage' which takes an array called 'arr' as
+// an argument. This function calculates the average of all numbers in the given
+// array. This is a difficult challenge (we haven't done this before)! Here is how to
+// solve it:
+// 4.1. First, you will need to add up all values in the array. To do the addition,
+// start by creating a variable 'sum' that starts at 0. Then loop over the
+// array using a for loop. In each iteration, add the current value to the
+// 'sum' variable. This way, by the end of the loop, you have all values
+// added together
+// 4.2. To calculate the average, divide the sum you calculated before by the
+// length of the array (because that's the number of elements)
+// 4.3. Call the function with the 'totals' array
+
+// const aboutMe = [    //this is array tau
+//     'Navein',
+//     26,
+//     1997,
+//     ['Amma', 'Appa', 'Anne'],
+//     'Kuantan',
+// ];
+
+// const types = [];
+
+// for (let i = 0; i < aboutMe.length; i++) {
+//     console.log(aboutMe[i], typeof aboutMe[i]);
+
+//     //filling the array
+//     // types[i] = typeof aboutMe[i];
+
+//     types.push(typeof aboutMe[i]);
+// }
+
+// console.log(types);
+
+// const years = [1991, 1950, 1890, 2000];
+// const age = [];
+
+// for (let i = 0; i < years.length; i++) {
+//     age.push(2037 - years[i]);
+//     console.log(age[i]);
+// }
+
+//continue & break
+// console.log(`--- Other than 1997 ---`);
+// for (let i = 0; i < aboutMe.length; i++) {
+//     if (aboutMe[i] === 1997) continue;
+//     //continue = avoid that value
+//     console.log(aboutMe[i]);
+// }
+
+// console.log(`--- Other than 1997 ---`);
+// for (let i = 0; i < aboutMe.length; i++) {
+//     if (aboutMe[i] === 1997) break;
+//     //break = dont go proceed on that value
+//     console.log(aboutMe[i]);
+// }
+
+// const aboutMe = [    //this is array tau
+//     'Navein',
+//     26,
+//     1997,
+//     ['Amma', 'Appa', 'Anne'],
+//     'Kuantan',
+//     'fatty'
+// ];
+
+// //Loop backwards
+// console.log(`--- Other than 1997 ---`);
+// for (let i = aboutMe.length - 1; i >= 0; i--) {
+//     console.log(aboutMe[i]);
+// }
+
+// for (let day = 1; day < 3; day++) {
+//     console.log(`Day ${day}`);
+
+//     for (let exercise = 1; exercise < 5; exercise++) {
+//         console.log(`exercise ${exercise} times for day ${day}`);
+//     }
+// }
+
+// print out day 1 using while loop
+
+// let day = 1;
+// while (day < 8) {
+//     console.log(`Day ${day}`);
+//     day++;
+// }
+
+// for (let i = 1; i < 8; i++) {
+//     console.log(`Day ${i}`);
+// }
+
+//range [0, 6), and by adding 1 to it, you shift the range to [1, 7)
+
+//Dice Roll - byMyself
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice < 7) {
+
+//     if (dice === 6) {
+//         console.log(`You rolled a ${dice}`);
+//         console.log(`Roll once more!!`);
+
+//         let dice1 = Math.trunc(Math.random() * 6) + 1;
+//         console.log(`You rolled a ${dice1}`);
+//         console.log(`You rolled a ${dice + dice1} in total`);
+//         break;
+
+//     } else {
+//         console.log(`You rolled a ${dice} in total`);
+//         break;
+//     }
+// }
 
 //Coding Challenge #4
 
-// const bill = 430;
-// let tip;
+// const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// const tips = [];
+// const total = [];
 
-// tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+// const calcTip = (bill) => {
+//     if (bill >= 50 && bill <= 300) {
+//         return bill * 0.15;
+//     } else {
+//         return bill * 0.2;
+//     }
+// }
 
-// console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
-//---------------------------------------
+// for (let i = 0; i < bills.length; i++) {
+//     tips[i] = calcTip(bills[i]);
+//     total[i] = tips[i] + bills[i];
+//     // console.log(`Bill: $${bills[i]} + tip: $${tips[i]} = total: $${total[i]}`);
+//     //correct edy
+// }
+
+// //focus here now - Bonus question
+// const calcAverage = (arr) => {
+//     let sum = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//     }
+
+//     //can do return straight
+//     // const average = sum / arr.length;
+//     // return average;
+
+//     return sum / arr.length;
+// }
+
+// console.log(calcAverage([2, 3, 4]));
+
+// const calcAverage = (arr) => {
+//     let sum = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += arr[i];
+//         // return sum; -  for loop, you dont have to put return.
+//     }
+//     return sum / arr.length;
+// }
+
+// console.log(calcAverage([23, 345, 56, 67, 32, 45]));
